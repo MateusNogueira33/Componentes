@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+<TITLE>Sistemas Embarcados: Tutorial sobre arduino- componentes basicos</TITLE>
+</HEAD>
+<BODY>
+<FONT FACE= "bookman old style" align= "center">
+<h1>Tutorial sobre Arduino com Componentes Básicos</h1></font>
+<h1>Arduíno:</h1>
+  Arduino é uma plataforma de prototipagem eletrônica de código aberto, criada em 2005 na Itália. É composta por duas partes principais:</h3>
+Hardware — uma placa com um microcontrolador (geralmente da família AVR da Atmel/Microchip) com pinos de entrada e saída que você conecta ao mundo real:sensores, LEDs, motores, displays, etc.
+Software — a IDE Arduino, onde você escreve o código em C/C++ simplificado e envia para a placa via USB.
+Arduino é usado em projetos como automação residencial, robótica, estações meteorológicas, instrumentos musicais, impressoras 3D, irrigação automática, e muito mais, tanto por iniciantes quanto por profissionais.
+<br>
+<br>
+<br>
+<IMG SRC="ARDUINO1.PNG" align= "center" width="380" height="320">
+<br>
+<br>
+<br>
+<h1>Buzzer:</h1>
+  O buzzer é um componente eletrônico que transforma sinal elétrico em som, muito usado em projetos Arduino para emitir alertas, notificações e melodias simples.
+Existem dois tipos: o ativo, que tem oscilador interno e só precisa receber tensão para funcionar, e o passivo, que precisa de um sinal externo com a frequência desejada, sendo mais versátil pois permite tocar qualquer nota.
+A ligação é simples, o pino positivo vai a um pino digital do Arduino e o negativo vai ao GND, sem necessidade de resistor.
+As frequências mais agradáveis ao ouvido ficam entre 500 e 4000 Hz, e no Arduino Uno só é possível controlar um buzzer por vez.
+<br>
+<br>
+<br>
+<IMG SRC="Buzzer.JPG" align= "center" width="380" height="320">
+<br>
+<br>
+<br>
+<h1>Resistor:</h1>
+  O resistor é um componente eletrônico passivo que tem a função de limitar ou controlar a passagem de corrente elétrica em um circuito. É um dos componentes mais básicos e essenciais da eletrônica.
+Seu valor é medido em ohms (Ω) e pode ser identificado pelas faixas coloridas impressas no corpo do componente, chamadas de código de cores. Cada cor representa um número, e a combinação delas indica o valor e a tolerância do resistor.
+No Arduino, o resistor é muito usado para proteger componentes como LEDs, evitando que recebam corrente demais e queimem. Também é usado em divisores de tensão, pull-up e pull-down em botões, e em conjunto com sensores.
+Existem resistores fixos, que têm um valor determinado, e variáveis, como o potenciômetro e o LDR, que mudam de valor conforme alguma condição externa, como a posição de um knob ou a intensidade de luz.
+A lei que rege o comportamento do resistor é a Lei de Ohm, que diz que a tensão é igual à corrente multiplicada pela resistência. Com ela você consegue calcular qual resistor usar em cada situação.
+<br>
+<br>
+<br>
+<IMG SRC="Resistor.JPG" align= "center" width="380" height="320">
+<br>
+<br>
+<br>
+<h1>Tabela com  os valores de ohms do Resistor:</h1>
+<br>
+<IMG SRC="tabela resistor.PNG" align= "center" width="440" height="320">
+<br>
+<br>
+<br>
+<h1>Led:</h1>
+  O LED, sigla para Light Emitting Diode ou Diodo Emissor de Luz, é um componente eletrônico que emite luz quando uma corrente elétrica passa por ele. É um dos componentes mais usados em projetos Arduino, desde simples indicadores visuais até displays e fitas de luz.
+Ele é um componente polarizado, ou seja, tem um lado positivo chamado anodo e um lado negativo chamado catodo. Para identificar cada lado, o anodo é o terminal mais longo e o catodo é o mais curto. Se ligado ao contrário, o LED simplesmente não acende e não queima, mas se ligado sem resistor pode queimar rapidamente.
+Por isso, o resistor é indispensável junto ao LED. Ele limita a corrente que passa pelo componente, protegendo tanto o LED quanto o pino do Arduino. O valor mais comum usado é o de 220Ω ou 330Ω para LEDs comuns de 5V.
+No Arduino, o LED pode ser controlado de duas formas: ligando e desligando completamente, ou controlando o brilho pelos pinos PWM, que permitem variar a intensidade da luz.
+Existem LEDs de diversas cores como vermelho, verde, azul, amarelo e branco, e também o LED RGB, que reúne três LEDs em um único componente e permite criar qualquer cor combinando as intensidades de vermelho, verde e azul.
+<br>
+<br>
+<br>
+<IMG SRC="Explicação resistor.JPG" align= "center" width="380" height="320">
+<br>
+<br>
+<br>
+<h1>Motores:</h1>
+  Os motores são componentes que convertem energia elétrica em movimento mecânico. No Arduino, são muito usados em projetos de robótica, automação e controle de movimento. Como consomem mais corrente do que o Arduino consegue fornecer, quase sempre precisam de um driver externo para funcionar com segurança.
+Motor DC é o mais simples de todos. Gira continuamente enquanto recebe tensão e sua velocidade pode ser variada. Para inverter o sentido de rotação é necessário usar uma ponte H, que é um módulo driver muito comum como o L298N. É usado em carrinhos, ventiladores e esteiras.
+Motor DC com caixa de redução, também chamado de motor com engrenagem ou gearmotor, é basicamente um motor DC com um conjunto de engrenagens acoplado. Isso reduz a velocidade de rotação mas aumenta o torque, ou seja, a força. É muito usado em robôs seguidores de linha e projetos que precisam de mais força e menos velocidade.
+Servo motor é um motor com controle de posição. Você define o ângulo exato que ele deve girar, geralmente entre 0 e 180 graus. Já tem circuito interno de controle e é simples de usar. É muito usado em braços robóticos, direção de carrinhos e projetos que exigem movimentos precisos.
+Motor de passo, ou stepper, gira em passos discretos e permite controle muito preciso de posição e velocidade sem precisar de sensor externo. É usado em impressoras 3D, CNCs e plotters. Precisa de um driver como o A4988 ou o ULN2003.
+Motor brushless é um motor DC sem escovas, mais eficiente, potente e durável que o motor DC comum. É muito usado em drones e aeromodelos. Para controlá-lo com Arduino é necessário um módulo ESC, que faz o papel do driver. 
+<br>
+<br>
+<br>
+<IMG SRC="servomotor.JPG" align= "center" width="380" height="320">
+<br>
+<br>
+<br>
+<h1>Display:</h1>
+  Os displays são componentes usados para exibir informações visuais como texto, números e gráficos. No Arduino, são muito úteis para mostrar dados de sensores, menus e status do sistema.
+Display LCD 16x2 é o mais clássico e popular entre iniciantes. Exibe 2 linhas com 16 caracteres cada. Pode ser ligado diretamente ao Arduino por vários pinos ou de forma mais prática usando um módulo adaptador I2C, que reduz a ligação para apenas 4 fios. É usado para exibir textos simples e valores de sensores.
+Display LCD 20x4 funciona da mesma forma que o 16x2, porém maior, com 4 linhas e 20 caracteres cada. Ideal para projetos que precisam mostrar mais informações ao mesmo tempo. Também é compatível com o módulo I2C.
+Display OLED é um display moderno, compacto e de alto contraste que não precisa de luz de fundo. Geralmente tem resolução de 128x64 pixels e se comunica via I2C ou SPI. Permite exibir textos, gráficos, ícones e até animações simples. É muito usado em projetos compactos e wearables.
+Display de 7 segmentos é formado por 7 LEDs dispostos em formato de número. Exibe dígitos de 0 a 9 e algumas letras. Pode vir em módulos com um ou mais dígitos e é muito usado em contadores, relógios e placares.
+Display TFT é um display colorido com resolução mais alta, capaz de exibir imagens, gráficos e interfaces mais elaboradas. Existem vários tamanhos, como 1.8, 2.4 e 3.5 polegadas. É mais complexo de programar mas permite criar projetos visualmente mais ricos.
+Display de matriz de pontos, ou dot matrix, é formado por uma grade de LEDs que permite exibir letras, números e animações. É muito usado em painéis de mensagens e letreiros rotativos.
+<br>
+<br>
+<br>
+<IMG SRC="display.JPG" align= "center" width="380" height="320">
+<br>
+<br>
+<br>
+<h1>Cabos MACHO e FÊMEA:</h1>
+Os cabos são essenciais para fazer as conexões entre os componentes em projetos Arduino. Eles existem em diferentes tipos de extremidades, chamadas de macho e fêmea, e a combinação correta depende do que você precisa conectar.
+Cabo macho é aquele que tem uma ponta metálica exposta, ou seja, o pino que entra na conexão. É chamado de macho justamente porque penetra na outra conexão.
+Cabo fêmea é aquele que tem uma entrada, ou seja, um buraco onde o pino macho se encaixa. Ele recebe a conexão.
+Cabo macho-macho tem pinos expostos nas duas extremidades. É o mais usado em protoboards, pois se encaixa diretamente nos furos da placa. Também é chamado de jumper e é indispensável em qualquer kit Arduino.
+Cabo macho-fêmea tem um pino em uma extremidade e uma entrada na outra. É muito usado para conectar o Arduino diretamente a módulos e sensores que já têm pinos soldados, como o sensor ultrassônico HC-SR04, servos e módulos em geral.
+Cabo fêmea-fêmea tem entradas nas duas extremidades. É usado para conectar dois pinos machos entre si, como por exemplo ligar dois módulos que já têm pinos expostos, ou conectar diretamente aos pinos do Arduino sem passar pela protoboard.
+No geral, para projetos em protoboard o cabo macho-macho é o mais usado. Para conectar módulos e sensores diretamente ao Arduino o macho-fêmea é o mais prático. E o fêmea-fêmea aparece mais em situações específicas de conexão entre módulos.
+<br>
+<br>
+<br>
+<IMG SRC="cabo.JPG" align= "center" width="380" height="320">
+<br>
+<br>
+<br>
+<h1>Capacitor:</h1>
+O capacitor é um componente eletrônico passivo que armazena energia elétrica temporariamente na forma de campo elétrico. É um dos componentes mais fundamentais da eletrônica, ao lado do resistor.
+Seu funcionamento é parecido com o de uma pequena bateria, ele carrega quando recebe tensão e descarrega quando o circuito precisa. Porém diferente de uma bateria, ele carrega e descarrega muito rapidamente.
+Seu valor é medido em farads (F), mas na prática os capacitores usados em projetos Arduino são bem pequenos, então os valores aparecem em microfarads (µF), nanofarads (nF) ou picofarads (pF).
+Capacitor eletrolítico é o tipo mais comum em projetos Arduino. Tem polaridade, ou seja, tem lado positivo e negativo que precisam ser respeitados na hora de ligar. É cilíndrico e geralmente usado para filtrar a alimentação e estabilizar tensão. Valores típicos vão de 1µF a milhares de µF.
+Capacitor cerâmico é pequeno, não tem polaridade e pode ser ligado em qualquer sentido. É usado para filtrar ruídos de alta frequência em circuitos. Valores típicos ficam na faixa de picofarads a nanofarads.
+Capacitor de filme é mais preciso e estável que os anteriores, usado em aplicações que exigem maior qualidade e precisão, como filtros de áudio.
+No Arduino, o capacitor é muito usado para estabilizar a tensão de alimentação, filtrar ruídos em sensores, proteger contra picos de corrente causados por motores e em conjunto com resistores para criar temporizadores e filtros.
+<br>
+<br>
+<br>
+<IMG SRC="capacitor.JPG" align= "center" width="380" height="320">
+<br>
+<br>
+<br>
+<h1>Capacitor:</h1>
+A protoboard, também chamada de breadboard, é uma placa de prototipagem que permite montar circuitos eletrônicos sem precisar soldar nenhum componente. É essencial para testar e desenvolver projetos de forma rápida e prática, pois os componentes podem ser inseridos e removidos facilmente.
+Ela é formada por uma grade de furos interligados internamente por trilhas metálicas. A organização dessas trilhas segue um padrão importante de entender para usar corretamente.
+As linhas horizontais nas bordas superior e inferior, geralmente marcadas com as cores vermelha e azul, são chamadas de trilhas de alimentação ou barramento de energia. A linha vermelha é usada para o positivo, o VCC ou 5V, e a azul para o negativo, o GND. Essas trilhas percorrem toda a extensão horizontal da protoboard.
+As colunas verticais no centro são onde os componentes são inseridos. Cada coluna de 5 furos é interligada internamente, ou seja, tudo que for inserido na mesma coluna estará conectado eletricamente. No meio da protoboard há um canal separador que divide as colunas em dois lados independentes, o que é útil para encaixar circuitos integrados.
+As protoboards vêm em vários tamanhos. As menores têm em torno de 170 furos e são usadas para circuitos simples. As médias com 400 furos e as maiores com 830 furos são mais usadas em projetos completos com vários componentes.
+Uma dica importante é sempre conectar as trilhas de alimentação ao 5V e ao GND do Arduino antes de começar a montar o circuito, pois isso facilita muito a distribuição de energia para todos os componentes.
+<br>
+<br>
+<br>
+<IMG SRC="protoboard.JPG" align= "center" width="380" height="320">
+<br>
+<br>
+<br>
+</BODY>
+</HTML>
